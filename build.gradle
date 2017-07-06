@@ -6,6 +6,7 @@
 buildscript {
     repositories {
         repositories {
+            maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
             maven { url 'http://repo1.maven.org/maven2/' }
             mavenCentral()
             jcenter()
@@ -17,6 +18,8 @@ buildscript {
         classpath 'org.akhikhl.gretty:gretty:+'
         classpath 'com.bmuschko:gradle-nexus-plugin:+'
         classpath 'com.github.ben-manes:gradle-versions-plugin:+'
+
+        //classpath  'com.puppycrawl.tools:checkstyle:6.11.2'
 
         classpath 'com.bmuschko:gradle-docker-plugin:2.5.1'
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE'
@@ -32,6 +35,9 @@ allprojects {
 
     apply plugin: 'java'
 
+    apply plugin: "checkstyle"
+
+
     ext {
         defaultEncoding = 'UTF-8'
         defaultLocale = 'en_US'
@@ -40,6 +46,7 @@ allprojects {
     }
 
     repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
         maven { url 'http://repo1.maven.org/maven2/' }
         mavenCentral()
         jcenter()
@@ -92,6 +99,17 @@ allprojects {
 
     }
 
+//    task checkstyle(type: Checkstyle) {
+//        //toolVersion = "2.0.1"
+//        ignoreFailures = true
+//        //config= files("$rootProject.projectDir/config/checkstyle/checkstyle.xml")
+//        source= fileTree('build/intermediates/classes/debug/com/sn/')
+//        classpath= files()
+//        reports{
+//            xml {
+//                destination "build/checkstyle-result.xml"
+//            }
+//        }
 
     processResources {
         group = 'compile'
@@ -106,6 +124,7 @@ allprojects {
 configure(rootProject) {
 
     apply plugin: 'groovy'
+
 
     task wrapper(type: Wrapper) {
         group = 'build setup'

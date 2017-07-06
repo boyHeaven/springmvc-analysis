@@ -1,0 +1,20 @@
+/*
+ * Copyright (C) 2014 China Telecom System Integration Co., Ltd.
+ * All rights reserved.
+ */
+
+modifyPom {
+    project {
+        name 'springmvc'
+        description 'springmvc-analysis standy'
+
+        developers {
+
+            developer {
+                id 'binbin'
+                name '杨学斌'
+                email 'yangxuebin@ctsi.com.cn'
+            }
+        }
+    }
+}

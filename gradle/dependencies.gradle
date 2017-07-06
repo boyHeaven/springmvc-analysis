@@ -1,0 +1,77 @@
+/*
+ * Copyright (C) 2014 China Telecom System Integration Co., Ltd.
+ * All rights reserved.
+ */
+
+ext {
+    gradleVersion = '3.5'
+
+    checkstyleVersion = '6.7'
+    jacocoVersion = '0.7.5.201505241946'
+
+    antlr4Version = '4.5'
+    aspectjVersion = '1.8.6'
+
+    // The base & web libraries version.
+    servletVersion = '3.1.0'
+    jettyVersion = '9.2.11.v20150529'
+
+    springVersion = '4.2.0.RELEASE'
+    springTestDbunitVersion = '1.2.1'
+    springSessionVersion = '1.0.2.RELEASE'
+
+    guavaVersion = '18.0'
+    guiceVersion = '4.0'
+
+    httpclientVersion = '4.5'
+
+    beetlVersion = '2.2.3'
+    jstlVersion = '1.2'
+
+    jacksonCoreVersion = '2.5.4'
+
+    jodatimeVersion = '2.8.1'
+
+    mirrorVersion = '1.6.1'
+
+    aspectjVersion = '1.8.6'
+
+    // the test libraries version.
+    reportngVersion = '1.1.4'
+    testngVersion = '6.9.4'
+    mockitoVersion = '1.10.19'
+    powermockVersion = '1.6.2'
+    objenesisVersion = '2.1'
+    hamcrestVersion = '1.3'
+    dbunitVersion = '2.5.1'
+    unitilsVersion = '3.4'
+    junitVersion = '4.12'
+    jsonpathVersion = '2.0.0'
+    springDbUnitVersion = '1.4.0'
+
+    // the logger libraries version.
+    slf4jVersion = '1.7.12'
+    logbackVersion = '1.1.3'
+
+    // the database and cache libraries version.
+    postgresqlVersion = '9.4-1201-jdbc41'
+    postgisVersion = '2.1.7'
+    druidVersion = '1.0.14'
+    jedisVersion = '2.7.2'
+
+    // the apache commons libraries version.
+    commonsLang3Version = '3.4'
+    commonsCodecVersion = '1.10'
+    commonsFileuploadVersion = '1.3.1'
+    commonsIOVersion = '2.4'
+    commonsCollectionsVersion = '4.0'
+
+    // the zookeeper libraries version.
+    disruptorVersion = '3.3.2'
+    curatorVersion = '2.7.1'
+    zookeeperVersion = '3.4.6'
+
+    // the gis libraries.
+    jtsVersion = '1.13'
+    geoToolsVersion = '13.2'
+}

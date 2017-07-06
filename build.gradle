@@ -1,0 +1,56 @@
+/*
+ * Copyright (C) 2015 China Telecom System Integration Co., Ltd.
+ * All rights reserved.
+ */
+
+buildscript {
+    repositories {
+        repositories {
+            maven { url 'http://repo1.maven.org/maven2/' }
+            mavenCentral()
+            jcenter()
+        }
+    }
+}
+
+allprojects {
+
+    apply plugin: 'java'
+
+    ext {
+        defaultEncoding = 'UTF-8'
+        defaultLocale = 'en_US'
+
+        gradleScriptDir = "${rootDir}/gradle"
+    }
+
+    repositories {
+        maven { url 'http://repo1.maven.org/maven2/' }
+        mavenCentral()
+        jcenter()
+    }
+    processResources {
+        group = 'compile'
+    }
+
+    processTestResources {
+        group = 'compile'
+    }
+}
+
+
+configure(rootProject) {
+
+    apply plugin: 'groovy'
+
+    task wrapper(type: Wrapper) {
+        group = 'build setup'
+        description = 'Generates gradlew[.bat] scripts.'
+        gradleVersion = "3.5"
+        distributionUrl = "http://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
+    }
+
+    // don't publish the default jar for the root project
+    configurations.archives.artifacts.clear()
+}
+

@@ -3,7 +3,7 @@ apply plugin: 'war'
 
 dependencies {
 
-    provided "javax.servlet:javax.servlet-api:${servletVersion}"
+    compile "javax.servlet:javax.servlet-api:${servletVersion}"
 
     compile "org.springframework:spring-beans:${springVersion}"
     compile "org.springframework:spring-jdbc:${springVersion}"

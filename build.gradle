@@ -25,6 +25,8 @@ buildscript {
 
 allprojects {
 
+    apply from: "${rootDir}/gradle/dependencies.gradle"
+
     group 'cn.com.yxb.springmvc-analysis'
     version '1.0-SNAPSHOT'
 
@@ -64,8 +66,6 @@ allprojects {
 
         // database libraries.
         compile "com.alibaba:druid:${druidVersion}"
-        runtime "org.postgresql:postgresql:${postgresqlVersion}"
-        runtime "org.postgis:postgis-jdbc:${postgisVersion}"
 
         compile "org.antlr:antlr4:${antlr4Version}"
         compile "org.aspectj:aspectjweaver:${aspectjVersion}"
